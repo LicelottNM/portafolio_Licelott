@@ -1,0 +1,234 @@
+body {
+  font-family: sans-serif;
+  margin: 0;
+  background-color: #1e272e; /* Un fondo oscuro similar */
+  color: #f9f9f9; /* Texto claro */
+  line-height: 1.6;
+  overflow-x: hidden; /* Para evitar el desplazamiento horizontal con la ola */
+}
+
+.hero {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 80vh; /* Ajusta según sea necesario */
+  padding: 20px;
+  text-align: center; /* Centra el contenido en pantallas pequeñas */
+}
+
+.hero-content {
+  max-width: 600px;
+  padding: 20px;
+}
+
+.hero-content h1 {
+  font-size: 3.5em;
+  font-weight: 300;
+  margin-bottom: 20px;
+}
+
+.hero-image {
+  max-width: 400px; /* Ajusta el tamaño de la imagen */
+  margin-left: 40px; /* Espacio entre el texto y la imagen */
+}
+
+.hero-image img {
+  width: 100%;
+  height: auto;
+  display: block; /* Evita espacio extra debajo de la imagen */
+}
+
+.wave-bottom {
+  position: relative;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 150px; /* Ajusta la altura de la ola */
+  transform: translateY(50px); /* Ajusta la posición vertical de la ola */
+}
+
+/* Estilos para pantallas más pequeñas (opcional) */
+@media (max-width: 768px) {
+  .hero {
+      flex-direction: column;
+      text-align: center;
+  }
+  .hero-image {
+      margin-left: 0;
+      margin-top: 30px;
+      max-width: 80%;
+  }
+}
+
+.my-work {
+  padding: 60px 20px;
+  text-align: center;
+  background-color: #f9f9f9; /* Fondo claro para la sección */
+  color: #1e272e; /* Texto oscuro */
+}
+
+.work-header {
+  max-width: 800px;
+  margin: 0 auto 40px;
+  padding: 0 20px;
+}
+
+.work-header h2 {
+  font-size: 2.5em;
+  font-weight: 300;
+  margin-bottom: 10px;
+}
+
+.work-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 30px;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 20px;
+}
+
+.work-card {
+  background-color: #fff;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+  transition: transform 0.3s ease-in-out;
+}
+
+.work-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+}
+
+.work-card img {
+  width: 100%;
+  height: auto;
+  display: block;
+  border-bottom: 1px solid #eee;
+}
+
+.work-card h3 {
+  font-size: 1.5em;
+  margin: 15px 20px 10px;
+  font-weight: 400;
+}
+
+.work-card p {
+  font-size: 0.9em;
+  line-height: 1.5;
+  margin: 0 20px 20px;
+  color: #555;
+}
+
+.work-links {
+  padding: 15px 20px;
+  border-top: 1px solid #eee;
+  background-color: #f9f9f9;
+  text-align: left;
+}
+
+.work-links a {
+  display: inline-block;
+  margin-right: 10px;
+}
+
+.work-links img {
+  width: 24px;
+  height: 24px;
+  vertical-align: middle;
+}
+
+/* Estilos para pantallas más pequeñas (opcional) */
+@media (max-width: 768px) {
+  .work-header {
+      margin-bottom: 30px;
+  }
+  .work-header h2 {
+      font-size: 2em;
+  }
+  .work-grid {
+      padding: 10px;
+  }
+  .work-card {
+      margin-bottom: 20px;
+  }
+}
+
+.image-popup {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.8); /* Fondo oscuro semitransparente */
+  display: none; /* Oculto por defecto */
+  justify-content: center;
+  align-items: center;
+  z-index: 1000; /* Asegura que esté por encima de todo */
+}
+
+.image-popup img {
+  max-width: 90%;
+  max-height: 90%;
+  object-fit: contain; /* Asegura que la imagen completa sea visible */
+}
+
+.close-button {
+  position: absolute;
+  top: 20px;
+  right: 30px;
+  color: #fff;
+  font-size: 30px;
+  font-weight: bold;
+  cursor: pointer;
+  z-index: 1001; /* Asegura que el botón esté por encima de la imagen */
+}
+
+.site-footer {
+  background-color: #1e272e; /* El mismo color de fondo oscuro */
+  color: #f9f9f9; /* Texto claro */
+  padding: 30px 20px;
+  text-align: center;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-top-left-radius: 20px; /* Opcional: para la curva superior */
+  border-top-right-radius: 20px; /* Opcional: para la curva superior */
+}
+
+.site-footer p {
+  margin: 0;
+  font-size: 0.9em;
+}
+
+.social-icons a {
+  display: inline-block;
+  margin-left: 20px;
+}
+
+.social-icons img {
+  width: 24px;
+  height: 24px;
+  vertical-align: middle;
+  opacity: 0.7;
+  transition: opacity 0.3s ease-in-out;
+}
+
+.social-icons img:hover {
+  opacity: 1;
+}
+
+/* Estilos para pantallas más pequeñas (opcional) */
+@media (max-width: 600px) {
+  .site-footer {
+      flex-direction: column;
+      text-align: center;
+  }
+  .social-icons {
+      margin-top: 20px;
+  }
+  .social-icons a {
+      margin-left: 10px;
+  }
+}
