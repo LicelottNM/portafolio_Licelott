@@ -38,6 +38,27 @@ body {
   display: block; /* Evita espacio extra debajo de la imagen */
 }
 
+.skills-container {
+    padding: 20px; /* Espacio alrededor del contenedor */
+    text-align: center; /* Centrar el título y la lista de habilidades */
+}
+
+.skills-list {
+    display: flex; /* Colocar los elementos en una fila */
+    flex-wrap: wrap; /* Pasar a la siguiente línea si no hay suficiente espacio */
+    justify-content: center; /* Centrar los elementos horizontalmente */
+    gap: 10px; /* Espacio entre los cuadros de habilidad */
+    margin-top: 15px; /* Espacio entre el título y la lista */
+}
+
+.skill {
+    background-color: #f0f0f0; /* Color de fondo de los cuadros */
+    color: #333; /* Color del texto */
+    padding: 8px 15px; /* Espacio dentro de los cuadros */
+    border-radius: 5px; /* Bordes redondeados */
+    font-size: 0.9em; /* Tamaño de la fuente */
+}
+
 .wave-bottom {
   position: relative;
   bottom: 0;
